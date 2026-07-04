@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import logo from "./assets/logo.svg";
 import illustration from "./assets/illustration-dashboard.png";
 import SubscribeForm from "./components/SubscribeForm.jsx";
