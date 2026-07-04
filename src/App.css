@@ -1,0 +1,188 @@
+.page {
+  max-width: 640px;
+  margin-inline: auto;
+  padding: 5rem 1.75rem 3rem;
+  text-align: center;
+}
+
+.logo {
+  margin: 0 auto;
+  width: 56px;
+  height: auto;
+}
+
+.headline {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.4;
+  color: var(--gray-400);
+}
+
+.headline strong {
+  font-weight: 700;
+  color: var(--blue-950);
+}
+
+.tagline {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: var(--blue-950);
+}
+
+/* Subscribe form */
+.subscribe {
+  margin: 2.5rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  max-width: 640px;
+}
+
+.subscribe__field {
+  flex: 1;
+  text-align: left;
+}
+
+.subscribe__input {
+  width: 100%;
+  padding: 0.875rem 2rem;
+  border: 1px solid var(--blue-200);
+  border-radius: 2rem;
+  color: var(--blue-950);
+}
+
+.subscribe__input::placeholder {
+  color: var(--blue-200);
+}
+
+.subscribe__input:focus {
+  outline: none;
+  border-color: var(--blue-500);
+}
+
+.subscribe__input--error,
+.subscribe__input--error:focus {
+  border-color: var(--red-400);
+}
+
+.subscribe__error {
+  margin: 0.5rem 0 0 2rem;
+  font-size: 0.6875rem;
+  font-style: italic;
+  color: var(--red-400);
+}
+
+.subscribe__button {
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: var(--blue-500);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 12px hsl(223deg 87% 63% / 0.2);
+  transition: opacity 0.2s ease;
+}
+
+.subscribe__button:hover {
+  opacity: 0.8;
+}
+
+/* Illustration */
+.illustration {
+  margin: 5.5rem auto 0;
+  width: 100%;
+  max-width: 640px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 4.5rem;
+}
+
+.socials {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socials__link {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid hsl(223deg 100% 88% / 0.5);
+  border-radius: 50%;
+  color: var(--blue-500);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.socials__link:hover {
+  background-color: var(--blue-500);
+  border-color: var(--blue-500);
+  color: #fff;
+}
+
+.copyright {
+  margin-top: 1.5rem;
+  font-size: 0.625rem;
+  color: var(--gray-400);
+}
+
+/* Desktop: fit the whole page within the viewport height (no scroll) */
+@media (min-width: 40rem) {
+  .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 760px;
+    padding-top: clamp(2rem, 5vh, 3.5rem);
+    padding-bottom: clamp(1.25rem, 4vh, 3rem);
+  }
+
+  .logo {
+    width: 86px;
+  }
+
+  .headline {
+    margin-top: clamp(0.75rem, 4vh, 2.5rem);
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    white-space: nowrap;
+  }
+
+  .tagline {
+    font-size: 1.25rem;
+  }
+
+  .subscribe {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    margin-top: clamp(1.25rem, 4vh, 2.5rem);
+  }
+
+  .subscribe__button {
+    padding-inline: 2.75rem;
+  }
+
+  .illustration {
+    margin-top: clamp(1.5rem, 5vh, 4.5rem);
+    width: auto;
+    max-width: 100%;
+    max-height: 40vh;
+  }
+
+  /* Push the footer to the bottom so remaining space is absorbed here */
+  .footer {
+    margin-top: auto;
+    padding-top: clamp(1.5rem, 3vh, 3rem);
+  }
+}
